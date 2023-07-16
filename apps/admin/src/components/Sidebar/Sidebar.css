@@ -1,0 +1,32 @@
+.Sidebar {
+  transition: max-width 0.5s ease, min-width 0.5s ease;
+}
+
+.Open {
+  max-width: 200px;
+  min-width: 200px;
+}
+
+.Close {
+  min-width: 50px;
+  max-width: 50px;
+}
+
+.HideSideBar {
+  display: none;
+}
+
+.Sidebar button,
+.Drawer button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 200px;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.Sidebar li:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+}

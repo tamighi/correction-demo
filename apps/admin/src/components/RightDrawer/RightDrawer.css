@@ -1,0 +1,13 @@
+.RightDrawer {
+  height: fit-content;
+  width: 400px;
+}
+
+.MobileRightDrawer {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  overflow-y: scroll;
+}

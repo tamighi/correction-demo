@@ -1,0 +1,33 @@
+.PendingMessagesCard {
+  padding: 0;
+  flex: 1 1 400px;
+  max-width: 100%;
+}
+
+.PendingMessagesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px;
+}
+
+.PendingMessage {
+  padding: 3px;
+  cursor: pointer;
+}
+
+.PendingMessage:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.PendingMessageTitle {
+  font-weight: 700;
+}
+
+.PendingMessageText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

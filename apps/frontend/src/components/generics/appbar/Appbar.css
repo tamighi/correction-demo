@@ -1,0 +1,32 @@
+.LinkList {
+  display: flex;
+}
+
+@media only screen and (max-width: 900px) {
+  .LinkList {
+    display: none;
+  }
+}
+
+.LinkList li {
+  display: flex;
+  align-items: center;
+}
+
+.LinkList button {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.LinkList button:hover {
+  color: #3c52b2;
+  transform: scale(1.2);
+}
+
+.Logo {
+  flex-grow: 1;
+  text-align: center;
+  font-family: cursive;
+  font-size: 200%;
+  color: inherit;
+}

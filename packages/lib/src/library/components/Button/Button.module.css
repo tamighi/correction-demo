@@ -1,0 +1,13 @@
+.Button {
+  font-family: inherit;
+  letter-spacing: inherit;
+  font-weight: bold;
+  border: none;
+  text-decoration: none;
+  border-radius: 5%;
+  padding: 6px;
+}
+
+.Button:not(:disabled):hover {
+  cursor: pointer;
+}

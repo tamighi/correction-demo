@@ -1,0 +1,42 @@
+.Drawer {
+  transform: none;
+}
+
+.Temporary {
+  z-index: 1100;
+  position: fixed;
+}
+
+.Persistent {
+  position: absolute;
+}
+
+.Closed {
+  visibility: hidden;
+}
+
+.Vertical {
+  top: 0;
+  bottom: 0;
+}
+
+.Horizontal {
+  left: 0;
+  right: 0;
+}
+
+.HiddenLeft {
+  transform: translateX(-100%);
+}
+
+.HiddenRight {
+  transform: translateX(100%);
+}
+
+.HiddenTop {
+  transform: translateY(-100%);
+}
+
+.HiddenBottom {
+  transform: translateY(100%);
+}

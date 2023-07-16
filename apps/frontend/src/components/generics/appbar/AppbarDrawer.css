@@ -1,0 +1,32 @@
+@media (min-width: 900px) {
+  .MobileAppbar {
+    display: none;
+  }
+}
+
+.DrawerLinkList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 70px;
+}
+
+.DrawerLinkList li {
+  height: 80px;
+  width: 100%;
+}
+
+.DrawerLinkList button {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.DrawerLinkList button:hover {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
+}

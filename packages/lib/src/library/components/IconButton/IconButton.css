@@ -1,0 +1,11 @@
+.IconButton {
+  border: none;
+  border-radius: 50%;
+  padding: 4px;
+  display: flex;
+  cursor: pointer;
+}
+
+.IconButton:hover {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+}

@@ -1,0 +1,5 @@
+.TableCell {
+  display: table-cell;
+  border: 1px solid #ddd;
+  padding: 8px;
+}

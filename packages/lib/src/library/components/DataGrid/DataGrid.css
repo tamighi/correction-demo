@@ -1,0 +1,21 @@
+.Clickable {
+  cursor: pointer;
+}
+
+.Clickable:hover {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+  ) !important;
+}
+
+.StrippedTable tr:nth-child(even) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+.StrippedTable tr:nth-child(odd) {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
+}

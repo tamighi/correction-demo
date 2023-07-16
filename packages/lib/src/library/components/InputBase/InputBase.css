@@ -1,0 +1,27 @@
+.InputContainer {
+  position: relative;
+}
+
+.InputFlex {
+  min-width: 150px;
+  width: inherit;
+}
+
+.Label {
+  position: absolute;
+  top: 4px;
+  pointer-events: none;
+  transition: transform 200ms;
+  left: 4px;
+  opacity: 0.6;
+}
+
+.InputContainer input:focus ~ .Label,
+.InputContainer textarea:focus ~ .Label,
+.InputContainer select:focus ~ .Label,
+/*TODO: Make it work*/
+.InputContainer select:not([value=""]) ~ .Label,
+.InputContainer input:not(:placeholder-shown) ~ .Label,
+.InputContainer textarea:not(:placeholder-shown) ~ .Label {
+  transform: translateY(-15px) translateX(10px) scale(0.75);
+}

@@ -1,0 +1,35 @@
+.CardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 12px;
+  gap: 24px;
+}
+
+.Card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 80px;
+  overflow-y: hidden;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.Card:hover {
+  transform: scale(1.01);
+}
+
+.CardHeader {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.CardContent {
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

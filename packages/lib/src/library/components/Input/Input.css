@@ -1,0 +1,14 @@
+.Input {
+  padding: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  border-radius: 3px;
+  resize: none;
+  /*TODO: Border with correct color*/
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.Input:focus {
+  outline: none;
+}

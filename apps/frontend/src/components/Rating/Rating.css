@@ -1,0 +1,29 @@
+.RatingContainer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NotDisabled {
+  cursor: pointer;
+}
+
+.RatingStar {
+  font-size: 24px;
+  color: #ccc;
+  margin: 0 5px;
+  outline: none;
+  border: none;
+  background: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.RatingStar.active {
+  color: #ffbf00;
+}
+
+.HiddenInput {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
