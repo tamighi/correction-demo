@@ -1,16 +1,12 @@
 import { Button, Input, TextArea, useForm } from "lib";
 
-import { usePostMessage } from "hooks";
 import { QuestionDto } from "types";
-import { FormContent, Loader, ApiErrorForm, Paragraph } from "components";
+import { FormContent, Paragraph } from "components";
 
 const QuestionContactForm = () => {
   const { register, handleSubmit, reset } = useForm<QuestionDto>();
-  const { mutate, isLoading, isError, isSuccess } =
-    usePostMessage<QuestionDto>("question");
 
-  const onSubmit = (question: Partial<QuestionDto>) => {
-    mutate(question);
+  const onSubmit = (_: Partial<QuestionDto>) => {
     reset();
   };
 
@@ -18,18 +14,18 @@ const QuestionContactForm = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormContent>
         <Paragraph>
-          Formulaire de demande d'informations
-          <br />
-          Une information vous manque ? Un cas particulier ? Contactez-moi !
+          Thank you for reaching out to us! We will respond to your inquiry as
+          soon as possible to provide you with the requested information or to
+          discuss your specific case.
         </Paragraph>
 
-        <Input required flex {...register("name")} label="Nom" />
+        <Input required flex {...register("name")} label="name" />
         <Input
           type="email"
           required
           flex
           {...register("email")}
-          label="Email"
+          label="email"
         />
 
         <TextArea
@@ -37,23 +33,14 @@ const QuestionContactForm = () => {
           flex
           rows={12}
           {...register("message")}
-          label="Message"
+          label="message"
         />
 
         <div style={{ gap: "6px", display: "flex", alignItems: "flex-start" }}>
-          <Button type="submit" variant="contained" disabled={isLoading}>
-            Envoyer
+          <Button type="submit" variant="contained">
+            Send
           </Button>
-          {isLoading && <Loader size="small" />}
-          {isError && <ApiErrorForm />}
         </div>
-
-        {isSuccess && (
-          <p>
-            Votre message a bien été envoyé ! Je reviendrai vers vous dès que
-            possible.
-          </p>
-        )}
       </FormContent>
     </form>
   );

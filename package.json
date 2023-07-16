@@ -1,0 +1,9 @@
+{
+  "name": "root",
+  "scripts": {},
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {}
+}

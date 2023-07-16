@@ -6,7 +6,7 @@ import ReviewContactForm from "./ReviewContactForm";
 const ReviewPage = () => {
   return (
     <CenteredPage>
-      <Title>Laissez moi un avis !</Title>
+      <Title>Leave me a review !</Title>
       <ReviewContactForm />
     </CenteredPage>
   );

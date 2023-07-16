@@ -1,16 +1,13 @@
 import { Button, Input, TextArea, useForm } from "lib";
 
-import { usePostMessage } from "hooks";
 import { ReviewDto } from "types";
-import { ApiErrorForm, FormContent, Loader, Rating } from "components";
+import { FormContent, Rating } from "components";
 
 const ReviewContactForm = () => {
   const { register, handleSubmit, reset } = useForm<ReviewDto>();
-  const { mutate, isLoading, isError, isSuccess } =
-    usePostMessage<ReviewDto>("review");
 
-  const onSubmit = (review: Partial<ReviewDto>) => {
-    mutate(review, { onSuccess: reset });
+  const onSubmit = (_: Partial<ReviewDto>) => {
+    reset();
   };
 
   return (
@@ -35,19 +32,10 @@ const ReviewContactForm = () => {
         />
 
         <div style={{ gap: "7px", display: "flex", alignItems: "flex-start" }}>
-          <Button type="submit" variant="contained" disabled={isLoading}>
+          <Button type="submit" variant="contained">
             Envoyer
           </Button>
-          {isLoading && <Loader size="small" />}
-          {isError && <ApiErrorForm />}
         </div>
-
-        {isSuccess && (
-          <p>
-            Votre message a bien été envoyé ! Je reviendrai vers vous dès que
-            possible.
-          </p>
-        )}
       </FormContent>
     </form>
   );

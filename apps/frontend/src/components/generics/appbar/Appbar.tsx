@@ -23,7 +23,7 @@ const navItems = [
     to: "/contact",
   },
   {
-    name: "Livre d'or",
+    name: "Golden Book",
     to: "/livredor",
   },
 ];

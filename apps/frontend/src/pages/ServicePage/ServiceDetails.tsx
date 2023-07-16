@@ -1,41 +1,48 @@
 import { ArrowBackIcon, DataGrid, IconButton } from "lib";
 
-import { useService } from "hooks";
 import { SubServiceDto } from "types";
 import { EmptyData, Paragraph, Title } from "components";
 
 import { useNavigate, useParams } from "react-router-dom";
 import { Column } from "react-table";
+import { services } from "../../constants";
 
 const columns: Column<SubServiceDto>[] = [
   {
     accessor: "textType",
     Header: () => {
-      return <span style={{fontSize: "22px", fontWeight: "bold"}}>Type de texte</span>
+      return (
+        <span style={{ fontSize: "22px", fontWeight: "bold" }}>Text type</span>
+      );
     },
     Cell: (props) => {
-      return <span style={{fontSize: "22px" }}>{props.cell.value}</span>
-    }
+      return <span style={{ fontSize: "22px" }}>{props.cell.value}</span>;
+    },
   },
   {
     accessor: "pricePerCharacter",
     Header: () => {
-      return <span style={{fontSize: "22px", fontWeight: "bold"}}>Prix par caractere</span>
+      return (
+        <span style={{ fontSize: "22px", fontWeight: "bold" }}>
+          Price per character
+        </span>
+      );
     },
     Cell: (props) => {
-      return <span style={{fontSize: "22px" }}>{props.cell.value}</span>
+      return <span style={{ fontSize: "22px" }}>{props.cell.value}</span>;
     },
   },
 ];
 
 const ServiceDetails = () => {
   const { id } = useParams() as { id: string };
-  const { data: service } = useService(id);
   const navigate = useNavigate();
+  const service = services.find((service) => service.id === Number(id));
 
   if (!service) {
     return null;
   }
+
   return (
     <>
       <IconButton onClick={() => navigate("/services")}>

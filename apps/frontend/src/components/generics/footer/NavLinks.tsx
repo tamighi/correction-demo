@@ -8,8 +8,8 @@ const NavLinks = () => {
       <NavLinkButton to="/">Home</NavLinkButton>
       <NavLinkButton to="contact">Contact</NavLinkButton>
       <NavLinkButton to="services">Services</NavLinkButton>
-      <NavLinkButton to="livredor">Livre d'or</NavLinkButton>
-      <NavLinkButton to="avis">Laisser un avis</NavLinkButton>
+      <NavLinkButton to="livredor">Golden Book</NavLinkButton>
+      <NavLinkButton to="avis">Review</NavLinkButton>
     </div>
   );
 };

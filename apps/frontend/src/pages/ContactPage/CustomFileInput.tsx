@@ -25,14 +25,14 @@ export const CustomFileInput = (props: CustomFileInputProps) => {
 
   return (
     <div>
-      <span>{filename ? filename : "aucun fichier"} </span>
+      <span>{filename ? filename : "No file selected"} </span>
       <Button
         type="button"
         variant="contained"
         color="secondary"
         onClick={handleClick}
       >
-        Parcourir
+        browse
       </Button>
       <input
         type="file"

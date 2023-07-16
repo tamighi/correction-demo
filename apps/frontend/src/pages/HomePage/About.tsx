@@ -14,22 +14,26 @@ const About = () => {
       }}
     >
       <Card style={{ padding: "12px", paddingTop: "0", margin: "8px" }}>
-        <Title>Bonjour a tous !</Title>
+        <Title>Welcome on my website !</Title>
         <br />
-        <Paragraph style={{fontSize: "24px"}} >
-          Pour vos récits, articles, mémoires, supports publicitaires,
-          magazines, presse d’entreprise, sites Internet..., particuliers,
-          professionnels, associations, collectivités, pensez à la correction
-          professionnelle ! Moins cher et moins chronophage qu’un stage de
-          formation en orthographe, plus concret que des séances de coaching
-          orthographique, plus fiable qu’un correcteur informatique…, avec la
-          correction professionnelle, améliorez progressivement votre niveau,
-          tout en éradiquant tout de suite les erreurs. De Paris, de France, de
-          n’importe où dans le monde, écrivez-moi ! <br /> <br />« La critique,
-          art aisé, se doit d’être constructive. » Boris Vian, écrivain, poète,
-          parolier et chanteur français (1920-1959) « Quoi que vous écriviez,
-          évitez la bassesse ; le style le moins noble a pourtant sa noblesse. »
-          Nicolas Boileau, écrivain et poète français (1636-1711)
+        <Paragraph style={{ fontSize: "24px" }}>
+          Are you looking to enhance your written materials? Whether it's
+          captivating stories, engaging articles, compelling dissertations,
+          persuasive advertising content, captivating magazines, or professional
+          company press releases, you've come to the right place. I offer
+          top-notch editing services that cater to individuals, professionals,
+          associations, and organizations alike. With my expertise, you can
+          elevate your content to new heights. Say goodbye to grammar and
+          spelling mistakes, and welcome impeccable writing that resonates with
+          your audience. Regardless of your location, be it Paris, France, or
+          anywhere in the world, let's collaborate to refine your written works.
+          <br />
+          <br />
+          Remember, "Constructive criticism is an art that nurtures growth." -
+          Boris Vian, Acclaimed French Writer, Poet, Lyricist, and Singer
+          (1920-1959) "No matter the subject, rise above mediocrity; even the
+          simplest style possesses inherent elegance." - Nicolas Boileau,
+          Celebrated French Writer and Poet (1636-1711)
         </Paragraph>
       </Card>
     </div>

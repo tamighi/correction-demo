@@ -13,10 +13,19 @@ const Footer = () => {
       <Paper className={styles.Footer}>
         <MediaLinks />
         <NavLinks />
-        <Copyright>
-          {"Copyright © Thomas Amighi "}
-          {new Date().getFullYear()}.
-        </Copyright>
+        <a
+          href="https://github.com/tamighi/correction-service-website"
+          target="_blank"
+          style={{
+            color: "inherit",
+            textDecoration: "none",
+          }}
+        >
+          <Copyright>
+            {"Copyright © Thomas Amighi "}
+            {new Date().getFullYear()}.
+          </Copyright>
+        </a>
       </Paper>
     </div>
   );

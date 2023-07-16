@@ -1,40 +1,27 @@
-import { ApiErrorImage, EmptyData, Loader, Paragraph, Title } from "components";
-import { useServices } from "hooks";
+import { Paragraph, Title } from "components";
+import { services } from "../../constants";
 
 import ServiceCard from "./ServiceCard";
 
 const ServiceMain = () => {
-  const { data: services, isError, isLoading } = useServices();
-
   return (
     <>
-      <Title>Les services proposés</Title>
+      <Title>Our services</Title>
       <Paragraph>
-        Avoir recours à un service de relecture-correction implique
-        naturellement d’y consacrer un budget. Vous pourrez cependant vite
-        constater que cette dépense est minime, au regard du travail induit et
-        des garanties de qualité apportées. En résumé, s’adjoindre un tel
-        service, c’est se donner les moyens de bonifier un document à peu de
-        frais, avec un maximum de valeur-ajoutée. Bref, vous ne le
-        regretterez-pas ! Vous hésitez encore ? Demandez un test de correction,
-        vous pourrez ainsi voir concrètement ce que cela peut vous apporter. À
-        moins que vous cherchiez plutôt à être accompagné(e) dans vos efforts
-        d’écriture.
+        Engaging a proofreading and editing service naturally involves budget
+        allocation. However, you will quickly realize that this expense is
+        minimal compared to the work involved and the quality guarantees
+        provided. In summary, opting for such a service means giving yourself
+        the means to enhance a document at a low cost while maximizing its added
+        value. In short, you won't regret it! Still hesitating? Request a sample
+        proofreading to see firsthand what it can bring you. Unless, of course,
+        you're looking for assistance with your writing efforts.
         <br />
-        <br />
-        Cliquez sur un service afin de voir les tarifs proposés.
+        <br /> Click on a service below to view the proposed rates.
       </Paragraph>
-      {isLoading ? (
-        <Loader />
-      ) : !services || isError ? (
-        <ApiErrorImage />
-      ) : services.length === 0 ? (
-        <EmptyData message="Aucun service pour le moment" />
-      ) : (
-        services.map((service) => (
-          <ServiceCard service={service} key={service.id} />
-        ))
-      )}
+      {services.map((service) => (
+        <ServiceCard service={service} key={service.id} />
+      ))}
     </>
   );
 };
