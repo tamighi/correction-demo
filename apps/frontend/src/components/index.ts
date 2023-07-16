@@ -9,3 +9,4 @@ export * from "./ApiErrorForm";
 export * from "./EmptyData";
 export * from "./typography";
 export * from "./generics";
+export * from "./Alert";

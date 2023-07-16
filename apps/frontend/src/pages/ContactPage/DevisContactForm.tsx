@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Button, Input, Select, TextArea, useForm } from "lib";
+import { Button, Input, Select, TextArea, useAlert, useForm } from "lib";
 
-import { DatePicker, FormContent, Paragraph } from "components";
+import { Alert, DatePicker, FormContent, Paragraph } from "components";
 import { DevisDto, SubServiceDto } from "types";
 import { CustomFileInput } from "./CustomFileInput";
 
@@ -10,6 +10,7 @@ import { services } from "../../constants";
 
 const DevisContactForm = () => {
   const { register, handleSubmit, reset } = useForm<DevisDto>();
+  const alert = useAlert();
 
   const [serviceId, setServiceId] = React.useState<number>();
   const [subServices, setSubServices] = React.useState<SubServiceDto[]>();
@@ -27,6 +28,14 @@ const DevisContactForm = () => {
   }, [serviceId]);
 
   const onSubmit = (_: Partial<DevisDto>) => {
+    alert.show({
+      render: (
+        <Alert>
+          Thank you for reaching! <br />I will get back to you as soon as
+          possible. <br/>(This is a demo, this form does not work.)
+        </Alert>
+      ),
+    });
     reset();
   };
 
@@ -87,7 +96,7 @@ const DevisContactForm = () => {
           flex
           rows={12}
           {...register("message")}
-          label="Message"
+          label="message"
         />
 
         <CustomFileInput onChange={setFile} />

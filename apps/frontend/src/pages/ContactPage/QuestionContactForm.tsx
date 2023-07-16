@@ -1,12 +1,21 @@
-import { Button, Input, TextArea, useForm } from "lib";
+import { Button, Input, TextArea, useAlert, useForm } from "lib";
 
 import { QuestionDto } from "types";
-import { FormContent, Paragraph } from "components";
+import { Alert, FormContent, Paragraph } from "components";
 
 const QuestionContactForm = () => {
   const { register, handleSubmit, reset } = useForm<QuestionDto>();
+  const alert = useAlert();
 
   const onSubmit = (_: Partial<QuestionDto>) => {
+    alert.show({
+      render: (
+        <Alert>
+          Thank you for reaching! <br />I will get back to you as soon as
+          possible. <br />(This is a demo, this form does not work.)
+        </Alert>
+      ),
+    });
     reset();
   };
 
@@ -19,17 +28,15 @@ const QuestionContactForm = () => {
           discuss your specific case.
         </Paragraph>
 
-        <Input required flex {...register("name")} label="name" />
+        <Input flex {...register("name")} label="name" />
         <Input
           type="email"
-          required
           flex
           {...register("email")}
           label="email"
         />
 
         <TextArea
-          required
           flex
           rows={12}
           {...register("message")}

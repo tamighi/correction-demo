@@ -6,6 +6,7 @@
   z-index: 1050;
 }
 
+/* TODO: Translate should not behave from %*/
 .Open {
   transform: translate(-50%, -200%);
 }
