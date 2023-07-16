@@ -19,9 +19,11 @@ const ServiceMain = () => {
         <br />
         <br /> Click on a service below to view the proposed rates.
       </Paragraph>
-      {services.map((service) => (
-        <ServiceCard service={service} key={service.id} />
-      ))}
+      <div style={{display:"flex", flexDirection: "column", gap: "14px"}}>
+        {services.map((service) => (
+          <ServiceCard service={service} key={service.id} />
+        ))}
+      </div>
     </>
   );
 };

@@ -40,7 +40,7 @@ const ReviewItem = (props: Props) => {
       </Paragraph>
       {isOverflow && (
         <Button onClick={() => setIsReadMore(!isReadMore)}>
-          {isReadMore ? "Voir moins..." : "Voir plus..."}
+          {isReadMore ? "See less..." : "See more..."}
         </Button>
       )}
     </Paper>
