@@ -27,6 +27,7 @@
     "@types/react-table": "^7.7.14",
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.2",
     "dotenv": "^16.0.3",
     "eslint": "^8.30.0",

@@ -7,7 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, "..", "build"),
     filename: "[name].[contenthash].bundle.js",
     clean: true,
-    publicPath: "/",
+    publicPath: "/work/correction-website-demo",
   },
   module: {
     rules: [
