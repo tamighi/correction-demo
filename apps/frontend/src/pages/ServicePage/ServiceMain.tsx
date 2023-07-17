@@ -1,6 +1,5 @@
 import { Paragraph, Title } from "components";
 import { services } from "../../constants";
-
 import ServiceCard from "./ServiceCard";
 
 const ServiceMain = () => {
@@ -19,7 +18,7 @@ const ServiceMain = () => {
         <br />
         <br /> Click on a service below to view the proposed rates.
       </Paragraph>
-      <div style={{display:"flex", flexDirection: "column", gap: "14px"}}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
         {services.map((service) => (
           <ServiceCard service={service} key={service.id} />
         ))}
