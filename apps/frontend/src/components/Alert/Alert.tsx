@@ -15,6 +15,7 @@ const Alert = (props: Props) => {
         justifyContent: "center",
         fontSize: "20px",
       }}
+      variant="secondary"
     >
       {children}
     </Card>

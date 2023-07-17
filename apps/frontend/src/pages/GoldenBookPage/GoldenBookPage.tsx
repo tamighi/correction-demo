@@ -30,14 +30,24 @@ const GoldenBookPage = () => {
           }}
         >
           <Button
-            onClick={() => setPage((prevPage) => prevPage - 1)}
+            onClick={() => {
+              setPage((prevPage) => prevPage - 1);
+              if (window) {
+                window.scrollTo({ top: 0 });
+              }
+            }}
             disabled={page <= 1}
           >
             Prev
           </Button>
           <span>Page {page}</span>
           <Button
-            onClick={() => setPage((prevPage) => prevPage + 1)}
+            onClick={() => {
+              setPage((prevPage) => prevPage + 1);
+              if (window) {
+                window.scrollTo({ top: 0 });
+              }
+            }}
             disabled={page === Math.ceil(reviews.length / reviewPerPage)}
           >
             Next
