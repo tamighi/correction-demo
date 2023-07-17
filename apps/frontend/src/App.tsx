@@ -25,7 +25,14 @@ export const App = () => {
     <div className={styles.App}>
       <Appbar />
       <Background />
-      <AnimatePresence mode="wait">
+      <AnimatePresence
+        onExitComplete={() => {
+          if (window) {
+            window.scrollTo({ top: 0 });
+          }
+        }}
+        mode="wait"
+      >
         <Routes location={location} key={route}>
           <Route path="" element={<HomePage />} />
           <Route path="contact" element={<ContactPage />} />

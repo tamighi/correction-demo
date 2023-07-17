@@ -23,15 +23,15 @@ const ReviewContactForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormContent>
-        <Input flex {...register("name")} label="Nom" />
-        <Input type="email" flex {...register("email")} label="Email" />
+        <Input flex {...register("name")} label="name" />
+        <Input type="email" flex {...register("email")} label="email" />
         <Rating {...register("note")} />
 
-        <TextArea flex rows={13} {...register("message")} label="Message" />
+        <TextArea flex rows={13} {...register("message")} label="message" />
 
         <div style={{ gap: "7px", display: "flex", alignItems: "flex-start" }}>
           <Button type="submit" variant="contained">
-            Envoyer
+            Send
           </Button>
         </div>
       </FormContent>
