@@ -37,8 +37,9 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-      - name: Build
+      - name: Build Lib
         run: npm run build --prefix packages/lib
+      - name: Build Frontend
         run: npm run build --prefix apps/frontend
       - name: Setup Pages
         uses: actions/configure-pages@v3
