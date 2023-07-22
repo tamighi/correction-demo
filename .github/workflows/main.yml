@@ -41,6 +41,8 @@ jobs:
         run: npm run build --prefix packages/lib
       - name: Build Frontend
         run: npm run build --prefix apps/frontend
+      - name: 404 fallback
+        run: cp ./apps/frontend/build/index.html ./apps/frontend/build/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
