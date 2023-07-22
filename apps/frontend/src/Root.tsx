@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 
 export const Root = () => {
   return (
-    <BrowserRouter basename="work/correction-website-demo">
+    <BrowserRouter basename="correction-demo">
       <ThemeProvider>
         <AlertProvider>
           <App />
